@@ -18,6 +18,11 @@ isLoggedIn = false
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     PlayerData = QBCore.Functions.GetPlayerData()
     isLoggedIn = true
+    local kvp = GetResourceKvpString("walkstyle")
+    if kvp ~= nil then
+        Wait(3000)
+        WalkMenuStart(kvp)
+    end
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
