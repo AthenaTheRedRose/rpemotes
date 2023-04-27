@@ -48,7 +48,6 @@ if Config.WalkingStylesEnabled and Config.PersistentWalk then
         local kvp = GetResourceKvpString("walkstyle")
 
         if kvp ~= nil then
-            Wait(8000)
             WalkMenuStart(kvp)
         end
     end)
